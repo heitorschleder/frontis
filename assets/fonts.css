@@ -1,0 +1,28 @@
+@font-face {
+    font-family: CodeLatin;
+    font-display: auto;
+    src: url(/fonts/MPLUSCodeLatin-Regular.ttf);
+}
+@font-face {
+    font-family: CodeLatin;
+    src: url(/fonts/MPLUSCodeLatin-ExtraLight.ttf);
+    font-weight: 100;
+    font-display: auto;
+}
+@font-face {
+    font-family: CodeLatin;
+    src: url(/fonts/MPLUSCodeLatin-Medium.ttf);
+    font-weight: 200;
+    font-display: auto;
+}
+@font-face {
+    font-family: CodeLatin;
+    src: url(/fonts/MPLUSCodeLatin-Bold.ttf);
+    font-weight: 900;
+    font-display: auto;
+}
+* {
+    font-family: "CodeLatin", monospace, sans-serif;
+    font-size: 17px;
+    font-display: auto;
+}
