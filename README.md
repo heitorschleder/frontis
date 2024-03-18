@@ -1,2 +1,1 @@
-# kronus-base-front
- front end do kronus
+Front end para projeto pessoal, reutilizando componentes já trabalhados.

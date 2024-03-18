@@ -1,11 +1,7 @@
 import { Directus } from '@directus/sdk';
 export default defineEventHandler(async (event) => {
 
-    // to do 
-    // define public role or custom role with read access to specific fields to get all *.*.* fields without restricted data
-
     const { hostPath } = await readBody(event);
-
 
     const client = new Directus(process.env['LOCAL_API_URL'] || "");
     await client.auth.static(process.env['LOCAL_API_TOKEN'] || "");
