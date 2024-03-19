@@ -1,15 +1,18 @@
 {
   "@vite/client": {
+    "prefetch": true,
     "isEntry": true,
     "file": "@vite/client",
     "css": [],
     "module": true,
     "resourceType": "script"
   },
-  "C:/Users/heitor.schleder/Documents/stud/devHS/front/node_modules/nuxt/dist/app/entry.js": {
+  "C:/Users/Heitor Schleder/Documents/Estudos/frontis/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
+    "prefetch": true,
+    "preload": true,
     "isEntry": true,
-    "file": "C:/Users/heitor.schleder/Documents/stud/devHS/front/node_modules/nuxt/dist/app/entry.js"
+    "file": "C:/Users/Heitor Schleder/Documents/Estudos/frontis/node_modules/nuxt/dist/app/entry.js"
   }
 }
