@@ -5,3 +5,8 @@ declare module "C:/Users/heitor.schleder/Documents/frontis/node_modules/nuxt/dis
     middleware?: MiddlewareKey | NavigationGuard | Array<MiddlewareKey | NavigationGuard>
   }
 }
+declare module 'nitropack' {
+  interface NitroRouteConfig {
+    appMiddleware?: MiddlewareKey | MiddlewareKey[] | Record<MiddlewareKey, boolean>
+  }
+}

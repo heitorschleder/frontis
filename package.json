@@ -38,6 +38,7 @@
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "tooltip": "^1.6.1",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "yarn": "^1.22.22"
   }
 }
