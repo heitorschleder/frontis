@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NaveProps } from "./data";
+import { NaveProps } from './data';
 defineProps({ props: { type: Object as PropType<NaveProps>, required: true } });
 </script>
 <template>
@@ -21,7 +21,7 @@ defineProps({ props: { type: Object as PropType<NaveProps>, required: true } });
         <div class="About flex flex-col justify-center items-center mt-60 ">
           <img class="w-[250px] h-[250px]"
             src="https://kronus.kebook.com.br/assets/8898e345-c657-4704-be94-a853cca535b5.png" alt="userPhoto" />
-          <h3>Teste Base</h3>
+          <h3>{{props.userName}}</h3>
           <h4>Desenvolvedor</h4>
           <ul class="flex space-x-2 p-0">
             <li><a href="https://google.com"><img class="w-6 h-6" src="./images/brand-facebook.png" alt="facebook"></a>
@@ -36,7 +36,7 @@ defineProps({ props: { type: Object as PropType<NaveProps>, required: true } });
         </div>
       </div>
       <div class="space-y-9">
-        <section id="AboutBrand" class="justify-end flex flex-row-reverse">
+        <section id="AboutBrand" class="justify-end flex flex-row-reverse text-orange-50">
           <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
 
           </div>
@@ -88,3 +88,4 @@ defineProps({ props: { type: Object as PropType<NaveProps>, required: true } });
   filter: blur(0.5px);
 }
 </style>
+

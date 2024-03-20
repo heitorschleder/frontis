@@ -1,26 +1,26 @@
-globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/node-fetch-native/dist/polyfill.mjs';
+globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/node-fetch-native/dist/polyfill.mjs';
 import { Server } from 'node:http';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { provider, isWindows } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/std-env/dist/index.mjs';
-import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, getRequestHeader, setResponseHeader, getRequestHeaders, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler, readBody, getQuery, createError } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/h3/dist/index.mjs';
-import { Directus } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/@directus/sdk/index.mjs';
-import { createRenderer } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import devalue from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { renderToString } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/vue/server-renderer/index.mjs';
-import { createFetch as createFetch$1, Headers } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/ofetch/dist/node.mjs';
-import destr from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/destr/dist/index.mjs';
-import { createCall, createFetch } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/hookable/dist/index.mjs';
-import { snakeCase } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/scule/dist/index.mjs';
-import defu, { defuFn } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/defu/dist/defu.mjs';
-import { hash } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/ohash/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, withQuery } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/ufo/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/unstorage/drivers/fs.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/heitor.schleder/Documents/frontis/node_modules/radix3/dist/index.mjs';
+import { provider, isWindows } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/std-env/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, getRequestHeader, setResponseHeader, getRequestHeaders, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler, readBody, getQuery, createError } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/h3/dist/index.mjs';
+import { Directus } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/@directus/sdk/index.mjs';
+import { createRenderer } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import devalue from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/@nuxt/devalue/dist/devalue.mjs';
+import { renderToString } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/vue/server-renderer/index.mjs';
+import { createFetch as createFetch$1, Headers } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/ofetch/dist/node.mjs';
+import destr from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/destr/dist/index.mjs';
+import { createCall, createFetch } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/hookable/dist/index.mjs';
+import { snakeCase } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/scule/dist/index.mjs';
+import defu, { defuFn } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/defu/dist/defu.mjs';
+import { hash } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/ohash/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, withQuery } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/ufo/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/node_modules/radix3/dist/index.mjs';
 
 const inlineAppConfig = {};
 
@@ -69,7 +69,7 @@ function deepFreeze(object) {
   return Object.freeze(object);
 }
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/heitor.schleder/Documents/frontis/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/Users/heitor.schleder/Documents/stud/devHS/front savepoint/server/assets"}];
 
 const assets = createStorage();
 
@@ -81,10 +81,10 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\heitor.schleder\\Documents\\frontis","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\heitor.schleder\\Documents\\frontis\\server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\heitor.schleder\\Documents\\frontis\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\heitor.schleder\\Documents\\frontis\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\heitor.schleder\\Documents\\stud\\devHS\\front savepoint","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\heitor.schleder\\Documents\\stud\\devHS\\front savepoint\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\heitor.schleder\\Documents\\stud\\devHS\\front savepoint\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\heitor.schleder\\Documents\\stud\\devHS\\front savepoint\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -488,13 +488,17 @@ const errorHandler = (async function errorhandler(error, event) {
   event.node.res.end(await res.text());
 });
 
-const _lazy_Z1LpAV = () => Promise.resolve().then(function () { return getSections$1; });
-const _lazy_c2h397 = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_gUNzV0 = () => Promise.resolve().then(function () { return getAvailableTimes$1; });
+const _lazy_heNpVd = () => Promise.resolve().then(function () { return getCoupom$1; });
+const _lazy_LWS9Nm = () => Promise.resolve().then(function () { return getSections$1; });
+const _lazy_1l6y1k = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/api/getSections', handler: _lazy_Z1LpAV, lazy: true, middleware: false, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_c2h397, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_c2h397, lazy: true, middleware: false, method: undefined }
+  { route: '/api/getAvailableTimes', handler: _lazy_gUNzV0, lazy: true, middleware: false, method: undefined },
+  { route: '/api/getCoupom', handler: _lazy_heNpVd, lazy: true, middleware: false, method: undefined },
+  { route: '/api/getSections', handler: _lazy_LWS9Nm, lazy: true, middleware: false, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_1l6y1k, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_1l6y1k, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -620,6 +624,72 @@ const errorDev = /*#__PURE__*/Object.freeze({
       template: template
 });
 
+const getAvailableTimes = defineEventHandler(async (event) => {
+  const client = new Directus(process.env["LOCAL_API_URL"] || "");
+  await client.auth.static(process.env["LOCAL_API_TOKEN"] || "");
+  const availableTimes = await client.items("availableTimes").readByQuery({
+    fields: "id, whatsappNumber, initialTime, endTime"
+  });
+  const currentTime = (/* @__PURE__ */ new Date()).toLocaleTimeString("pt-BR", { hour12: false, hour: "2-digit", minute: "2-digit" });
+  event.node.res.setHeader("Cloudflare-CDN-Cache-Control", "public, max-age=864000, s-maxage=864000");
+  return availableTimes.data.filter((e) => {
+    const initialTime = e.initialTime.split(":");
+    const endTime = e.endTime.split(":");
+    const currentTimeSplit = currentTime.split(":");
+    const initialTimeDate = new Date(0, 0, 0, parseInt(initialTime[0]), parseInt(initialTime[1]));
+    const endTimeDate = new Date(0, 0, 0, parseInt(endTime[0]), parseInt(endTime[1]));
+    const currentTimeDate = new Date(0, 0, 0, parseInt(currentTimeSplit[0]), parseInt(currentTimeSplit[1]));
+    return currentTimeDate >= initialTimeDate && currentTimeDate <= endTimeDate;
+  }).sort(() => 0.5 - Math.random());
+});
+
+const getAvailableTimes$1 = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      default: getAvailableTimes
+});
+
+const getCoupom = defineEventHandler(async (event) => {
+  var _a, _b, _c, _d;
+  const client = new Directus(process.env["LOCAL_API_URL"] || "");
+  await client.auth.static(process.env["LOCAL_API_TOKEN"] || "");
+  const { productId, couponCode } = await readBody(event);
+  const coupons = await client.graphql.items(
+    `
+    query ($productId: ID!, $couponCode: String) {
+      products_by_id(id: $productId) {
+        coupons(
+          filter: {
+            coupons_id: {
+              code: { _eq: $couponCode }
+              start: { _lte: "$NOW" }
+              end: { _gte: "$NOW" }
+            }
+          }
+        ) {
+          coupons_id {
+            id
+            description
+            percent
+            checkoutLink
+          }
+        }
+      }
+    }       
+    `,
+    {
+      productId,
+      couponCode
+    }
+  );
+  event.node.res.setHeader("Cloudflare-CDN-Cache-Control", "public, max-age=864000, s-maxage=864000");
+  return ((_d = (_c = (_b = (_a = coupons == null ? void 0 : coupons.data) == null ? void 0 : _a.products_by_id) == null ? void 0 : _b.coupons) == null ? void 0 : _c[0]) == null ? void 0 : _d.coupons_id) || null;
+});
+
+const getCoupom$1 = /*#__PURE__*/Object.freeze({
+      __proto__: null,
+      default: getCoupom
+});
+
 const getSections = defineEventHandler(async (event) => {
   const { hostPath } = await readBody(event);
   const client = new Directus(process.env["LOCAL_API_URL"] || "");
@@ -691,9 +761,9 @@ function publicAssetsURL(...path) {
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () => import('file://C:/Users/heitor.schleder/Documents/frontis/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getStaticRenderedHead = () => Promise.resolve().then(function () { return _virtual__headStatic$1; }).then((r) => r.default || r);
-const getServerEntry = () => import('file://C:/Users/heitor.schleder/Documents/frontis/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getServerEntry = () => import('file://C:/Users/heitor.schleder/Documents/stud/devHS/front%20savepoint/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {

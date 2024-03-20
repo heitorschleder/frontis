@@ -1,11 +1,14 @@
+# Use nodejs
 FROM node:18.18.0
 
 ARG PUBLIC_ALLOWED_DOMAINS
 ENV PUBLIC_ALLOWED_DOMAINS ${PUBLIC_ALLOWED_DOMAINS}
 
+# create destination directory
 RUN mkdir -p /usr/src/nuxt-app
 WORKDIR /usr/src/nuxt-app
 
+# copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
 RUN yarn install
 

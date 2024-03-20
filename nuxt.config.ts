@@ -24,19 +24,8 @@ export default defineNuxtConfig({
         routes: []
     },
     modules: [
-        '@nuxt/image','@nuxtjs/tailwindcss', 'shadcn-nuxt'
+        '@nuxt/image',
     ],
-    shadcn: {
-        /**
-         * Prefix for all the imported component
-         */
-        prefix: '',
-        /**
-         * Directory that the component lives in.
-         * @default "./components/ui"
-         */
-        componentDir: './components/ui'
-    },
     runtimeConfig: {
         public: {
             PUBLIC_ALLOWED_DOMAINS: JSON.parse(process.env['PUBLIC_ALLOWED_DOMAINS'] || "[]") as string[]
