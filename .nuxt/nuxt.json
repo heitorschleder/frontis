@@ -1,9 +1,9 @@
 {
-  "_hash": "YxsnOTgbTd",
+  "_hash": "ruesCLQ6mg",
   "project": {
-    "rootDir": "C:/Users/Heitor Schleder/Documents/Estudos/frontis"
+    "rootDir": "C:/Users/heitor.schleder/Documents/frontis"
   },
   "versions": {
-    "nuxt": "3.11.1"
+    "nuxt": "3.4.1"
   }
 }

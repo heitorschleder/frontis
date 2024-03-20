@@ -1,20 +1,8 @@
 
-import { updateAppConfig } from '#app/config'
-import { defuFn } from 'defu'
+import { defuFn } from 'C:/Users/heitor.schleder/Documents/frontis/node_modules/defu/dist/defu.mjs'
 
-const inlineConfig = {
-  "nuxt": {
-    "buildId": "dev"
-  }
-}
-
-// Vite - webpack is handled directly in #app/config
-if (import.meta.hot) {
-  import.meta.hot.accept((newModule) => {
-    updateAppConfig(newModule.default)
-  })
-}
+const inlineConfig = {}
 
 
 
-export default /*@__PURE__*/ defuFn(inlineConfig)
+export default /* #__PURE__ */ defuFn(inlineConfig)
