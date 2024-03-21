@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { NaveProps } from './data';
-defineProps({ props: { type: Object as PropType<NaveProps>, required: true } });
+import { BodyProps } from './data';
+defineProps({ props: { type: Object as PropType<BodyProps>, required: true } });
 </script>
 <template>
   <section id="MainBody" class="bg-[#000000] w-[100%] h-[100%] p-3">
