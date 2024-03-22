@@ -9,10 +9,9 @@ export const getHostPath = () => {
     } else {
         host = window.location.host;
     }
+    /*Adicionar domínios permitidos*/
+    const allowedDomains = (runtimeConfig.public.PUBLIC_ALLOWED_DOMAINS || ['localhost']) as string[];
 
-    const allowedDomains = (runtimeConfig.public.PUBLIC_ALLOWED_DOMAINS || ['kebook.com.br', 'localhost']) as string[];
-
-    // If we are in localhost, we need to change the host to the one we are using
     if (allowedDomains.some(allowedDomain => host.includes(`.` + allowedDomain))) {
         const subdomain = host.split(".")[0];
         host = `${subdomain}.kebook.com.br`;

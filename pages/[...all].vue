@@ -1,8 +1,3 @@
-<template>
-    <div v-for="{ componentName, data } in dataValue.sections">
-        <ResolveWithProps :componentName="componentName" :props="data" :productId="dataValue.id.toString()" />
-    </div>
-</template>
 <script setup lang="ts">
 interface DataValue {
     id: string,
@@ -19,3 +14,9 @@ const data = await useFetch(`/api/getSections`, {
 });
 const dataValue: DataValue = data.data.value;
 </script>
+<template>
+    <div v-for="{ componentName, data } in dataValue.sections">
+        <ResolveWithProps :componentName="componentName" :props="data" :productId="dataValue.id.toString()" />
+    </div>
+</template>
+

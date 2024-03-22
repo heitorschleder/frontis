@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { BodyProps } from './data';
-defineProps({ props: { type: Object as PropType<BodyProps>, required: true } });
+import { CorpoProps } from './data';
+defineProps({ props: { type: Object as PropType<CorpoProps>, required: true } });
 </script>
 <template>
   <section id="MainBody" class="bg-[#000000] w-[100%] h-[100%] p-3">
@@ -37,8 +37,9 @@ defineProps({ props: { type: Object as PropType<BodyProps>, required: true } });
       </div>
       <div class="space-y-9">
         <section id="AboutBrand" class="justify-end flex flex-row-reverse text-orange-50">
-          <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
-
+          <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[200px] p-2">
+            <h1 class="ml-2 text-lg">Description</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, culpa? Veritatis totam error dolores odit. Quasi suscipit, enim, harum quam corporis nobis voluptatibus, provident deleniti soluta corrupti beatae exercitationem voluptatum?</p>
           </div>
         </section>
         <section id="Projects">
