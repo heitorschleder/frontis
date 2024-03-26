@@ -18,14 +18,15 @@ onMounted(() => {
 });
 </script>
 <template>
-entao fodase se eu escrever sem um p
-  <div class="">
-    <!-- lembrar de dar hidden nessa parada de musica ai -->
+  <v-app>
+    <div class="">
+    <!-- lembrar de dar hidden nessa parada de musica ai
     <button @click="playAudioOnClick">Play Audio</button>
     <audio controls id="myAudio">
       <source src="./images/song.mp3" type="audio/mp3" />
     </audio>
-  </div>
+    -->
+  </div>  
   <section id="MainBody" class="bg-[#000000] w-[100%] h-[100%] p-3">
     <section id="Navegator">
       <div class="flex flex-row-reverse p-6">
@@ -33,9 +34,6 @@ entao fodase se eu escrever sem um p
           class="bg-[#000000ed] border-solid border-1 border-sky-400 h-10 w-[450px] flex justify-start"
         >
           <nav class="flex space-x-10 p-2">
-            <ul>
-              <li class="NavIten pl-8">Sobre<a class="text-black hover:text-sky-600 transition-opacity" href="#About">#</a></li>
-            </ul>
             <a class="NavIten pl-8" href="#About">Sobre</a>
             <a class="NavIten pl-0" href="#Projects">Projects</a>
             <a class="NavIten pl-0" href="#Certifies">Certifies</a>
@@ -61,7 +59,7 @@ entao fodase se eu escrever sem um p
               <a href="https://google.com"
                 ><img
                   class="w-6 h-6"
-                  :src="props.test"
+                  src=""
                   alt="facebook"
               /></a>
             </li>
@@ -129,6 +127,7 @@ entao fodase se eu escrever sem um p
       </div>
     </section>
   </section>
+  </v-app>
 </template>
 <style>
 .About {
