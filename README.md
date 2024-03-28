@@ -1,2 +1,1 @@
-# kronus-base-front
- front end do kronus
+Front end de treino para futuras aplicações
