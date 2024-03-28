@@ -81,7 +81,7 @@ onMounted(() => {
               <v-carousel hide-delimiters style="height: 100%;">
                 <v-carousel-item v-for="projects in props.projects" :key="projects.id" class="CardItem">
                   <div class="grid grid-rows-2 grid-flow-col gap-1">
-                    <img :src="projects.image" alt="imageProject" class="row-span-3 p-2">
+                    <img :src="projects.image" alt="imageProject" class="row-span-3 p-2 ml-2 mt-6 h-[250px] w-[250px] rounded-full object-contain object-center border-solid border-1 border-sky-400">
                     <div class="col-span-2 mt-5">
                       <h2>{{ projects.title }}</h2>
                       <p>{{ projects.about }}</p>
@@ -98,10 +98,18 @@ onMounted(() => {
             </div>
           </section>
           <section id="Certifies">
-            <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]"></div>
+            <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
+              <div>
+
+              </div>
+            </div>
           </section>
           <section id="Skills">
-            <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]"></div>
+            <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
+              <div>
+
+              </div>
+            </div>
           </section>
         </div>
       </section>
