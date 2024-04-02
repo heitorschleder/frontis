@@ -1,9 +1,6 @@
 import { Directus } from '@directus/sdk';
 export default defineEventHandler(async (event) => {
 
-    // to do 
-    // define public role or custom role with read access to specific fields to get all *.*.* fields without restricted data
-
     const { hostPath } = await readBody(event);
 
 
@@ -28,18 +25,17 @@ export default defineEventHandler(async (event) => {
     for (const section of product.sections) {
         try {
             promises.push((async () => {
-                // get section data
+                
                 const sectionData = await client.items(section.collection).readOne(section.item, {
                     fields: ["*.*.*.*.*"]
                 });
 
-                // remove from section data status, sort, user_created, user_updated, date_created, date_updated
                 delete sectionData.status;
                 delete sectionData.sort;
                 delete sectionData.user_created;
                 delete sectionData.user_updated;
                 delete sectionData.date_created;
-                // get component name
+                
                 const componentName = (await client.items("directus_collections").readOne(section.collection, {
                     fields: ["meta.nuxtComponentName"]
                 })).meta.nuxtComponentName;

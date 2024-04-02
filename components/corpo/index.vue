@@ -97,17 +97,27 @@ onMounted(() => {
               </v-carousel>
             </div>
           </section>
-          <section id="Certifies">
+          <section id="Skills">
             <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
-              <div>
-
+              <div class="flex flex-col justify-center items-center p-2">
+                <h3 class="text-orange-50">Skills and SoftSkills</h3>
+                <div>
+                  <v-carousel :touchless="true" :show-arrows="false" class="text-orange-50 w-[900px] h-[300px]" style="height: 100%;">
+                    <v-carousel-item cover>
+                      <p>teste</p>
+                    </v-carousel-item>
+                    <v-carousel-item>
+                      <p>teste 2</p>
+                    </v-carousel-item>
+                  </v-carousel>
+                </div>
               </div>
             </div>
           </section>
-          <section id="Skills">
+          <section id="Certifies">
             <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
-              <div>
-
+              <div class="flex justify-center p-2">
+                <h3 class="text-orange-50">Certificados</h3>
               </div>
             </div>
           </section>
@@ -127,7 +137,9 @@ onMounted(() => {
   justify-content: center;
   align-content: center;
 }
-
+.v-carousel__controls {
+  display: none!important;
+}
 .NavIten {
   text-decoration: none;
   color: #ffffff;
