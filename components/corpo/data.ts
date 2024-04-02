@@ -3,6 +3,14 @@ export interface CorpoProps {
     userPhoto: string;
     userEspec: string;
     projects: Projects[];
+    skills: Skills[];
+}
+export interface Skills {
+    id: number;
+    colorSkill: string;
+    title: string;
+    image: string;
+    percent: string;
 }
 export interface Projects {
     id: number;
@@ -16,6 +24,20 @@ export const corpoProps = {
     userName: 'Heitor teste',
     userPhoto: "https://kronus.kebook.com.br/assets/8898e345-c657-4704-be94-a853cca535b5.png",
     userEspec: "Dev",
+    skills: [{
+        id: 1,
+        colorSkill: "#000000ed",
+        title: "Javascript",
+        image: "https://kronus.kebook.com.br/assets/6e81e244-364d-4597-98b9-71b3dc8cc881.png",
+        percent: "1/10",
+    },
+    {
+        id: 2,
+        colorSkill: "#000000ed",
+        title: "VueJS",
+        image: "https://kronus.kebook.com.br/assets/2e3e1383-b62b-4e1c-a6f8-199f225921f6.png",
+        percent: "0/10",
+    },],
     projects: [{
         id: 1,
         title: "example number one",

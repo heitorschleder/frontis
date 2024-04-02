@@ -81,15 +81,18 @@ onMounted(() => {
               <v-carousel hide-delimiters style="height: 100%;">
                 <v-carousel-item v-for="projects in props.projects" :key="projects.id" class="CardItem">
                   <div class="grid grid-rows-2 grid-flow-col gap-1">
-                    <img :src="projects.image" alt="imageProject" class="row-span-3 p-2 ml-2 mt-6 h-[250px] w-[250px] rounded-full object-contain object-center border-solid border-1 border-sky-400">
+                    <img :src="projects.image" alt="imageProject"
+                      class="row-span-3 p-2 ml-2 mt-6 h-[250px] w-[250px] rounded-full object-contain object-center border-solid border-1 border-sky-400">
                     <div class="col-span-2 mt-5">
                       <h2>{{ projects.title }}</h2>
                       <p>{{ projects.about }}</p>
                     </div>
                     <div class="row-span-2 col-span-2">
                       <div class="flex space-x-2 p-0 ">
-                        <a :href="projects.linkView"><img class="w-8 h-8 bg-gray-500 rounded-full" src="./images/eye.png" alt=""></a>
-                        <a :href="projects.linkSource"><img class="w-8 h-8 bg-gray-500 rounded-full" src="./images/brand-github.png" alt=""></a>
+                        <a :href="projects.linkView"><img class="w-8 h-8 bg-gray-500 rounded-full"
+                            src="./images/eye.png" alt=""></a>
+                        <a :href="projects.linkSource"><img class="w-8 h-8 bg-gray-500 rounded-full"
+                            src="./images/brand-github.png" alt=""></a>
                       </div>
                     </div>
                   </div>
@@ -102,12 +105,15 @@ onMounted(() => {
               <div class="flex flex-col justify-center items-center p-2">
                 <h3 class="text-orange-50">Skills and SoftSkills</h3>
                 <div>
-                  <v-carousel :touchless="true" :show-arrows="false" class="text-orange-50 w-[900px] h-[300px]" style="height: 100%;">
-                    <v-carousel-item cover>
-                      <p>teste</p>
-                    </v-carousel-item>
-                    <v-carousel-item>
-                      <p>teste 2</p>
+                  <v-carousel class="Swiper" height="240" show-arrows="hover" cycle hide-delimiter-background>
+                    <v-carousel-item v-for="skill in props.skills" :key="skill.id" class="text-orange-50 ">
+                      <v-sheet :color="skill.colorSkill" height="100%" class="Card">
+                        <div class="d-flex fill-height justify-center align-center">
+                          <div class="text-h2">
+                            {{ skill.title }}
+                          </div>
+                        </div>
+                      </v-sheet>
                     </v-carousel-item>
                   </v-carousel>
                 </div>
@@ -130,16 +136,23 @@ onMounted(() => {
 .About {
   color: #fff9f9;
 }
-
+.Swiper {
+  width: 40vw!important;
+}
+.Card {
+  color: #fff9f9!important;
+}
 .CardItem {
   height: 100%;
   display: flex !important;
   justify-content: center;
   align-content: center;
 }
+
 .v-carousel__controls {
-  display: none!important;
+  display: none !important;
 }
+
 .NavIten {
   text-decoration: none;
   color: #ffffff;
