@@ -26,129 +26,231 @@ onMounted(() => {
       <source src="./images/song.mp3" type="audio/mp3" />
     </audio>
     </div>  -->
-    <section>
-      <section id="Navegator">
-        <div class="flex flex-row-reverse p-6">
-          <div class="bg-[#000000ed] border-solid border-1 border-sky-400 h-10 w-[450px] flex justify-start">
-            <nav class="flex space-x-10 p-2">
-              <a class="NavIten pl-8" href="#About">Sobre</a>
-              <a class="NavIten pl-0" href="#Projects">Projects</a>
-              <a class="NavIten pl-0" href="#Certifies">Certifies</a>
-              <a class="NavIten pl-0" href="#Skills">Skills</a>
-            </nav>
-          </div>
+    <section id="Navegator">
+      <div class="flex flex-row-reverse p-6">
+        <div
+          class="bg-[#000000ed] border-solid border-1 border-sky-400 h-10 w-[450px] flex justify-start"
+        >
+          <nav class="flex space-x-10 p-2">
+            <a
+              class="NavIten text-slate-100 no-underline pl-8 hover:text-blue-600 hover:animate-[wiggle_1s_ease-in-out_infinite]"
+              href="#About"
+              >Sobre</a
+            >
+            <a
+              class="NavIten text-slate-100 no-underline pl-0 hover:text-blue-600 hover:animate-[wiggle_1s_ease-in-out_infinite]"
+              href="#Projects"
+              >Projects</a
+            >
+            <a
+              class="NavIten text-slate-100 no-underline pl-0 hover:text-blue-600 hover:animate-[wiggle_1s_ease-in-out_infinite]"
+              href="#Certifies"
+              >Certifies</a
+            >
+            <a
+              class="NavIten text-slate-100 no-underline pl-0 hover:text-blue-600 hover:animate-[wiggle_1s_ease-in-out_infinite]"
+              href="#Skills"
+              >Skills</a
+            >
+          </nav>
         </div>
-      </section>
-      <section id="PhotoAndSocials" class="Infos flex">
-        <div class="DivLasteral border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0">
-          <div class="About flex flex-col justify-center items-center mt-60">
-            <img class="w-[250px] h-[250px]" :src="props.userPhoto" alt="userPhoto" />
-            <h3>{{ props.userName }}</h3>
-            <h4>{{ props.userEspec }}</h4>
-            <ul class="flex space-x-2 p-0">
-              <li>
-                <a href="https://google.com"><img class="w-6 h-6" src="./images/brand-facebook.png"
-                    alt="facebook" /></a>
-              </li>
-              <li>
-                <a href="https://google.com"><img class="w-6 h-6" src="./images/brand-instagram.png"
-                    alt="instagram" /></a>
-              </li>
-              <li>
-                <a href="https://google.com"><img class="w-6 h-6" src="./images/brand-linkedin.png"
-                    alt="linkedin" /></a>
-              </li>
-              <li>
-                <a href="https://google.com"><img class="w-6 h-6" src="./images/brand-github.png" alt="github" /></a>
-              </li>
-            </ul>
-          </div>
+      </div>
+    </section>
+    <section id="PhotoAndSocials" class="Infos flex">
+      <div
+        class="DivLasteral border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0"
+      >
+        <div class="About flex flex-col justify-center items-center mt-60">
+          <img
+            class="w-[250px] h-[250px]"
+            :src="props.userPhoto"
+            alt="userPhoto"
+          />
+          <h3>{{ props.userName }}</h3>
+          <h4>{{ props.userEspec }}</h4>
+          <ul class="flex space-x-2 p-0">
+            <li>
+              <a href="https://google.com"
+                ><img
+                  class="w-6 h-6"
+                  src="./images/brand-facebook.png"
+                  alt="facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="https://google.com"
+                ><img
+                  class="w-6 h-6"
+                  src="./images/brand-instagram.png"
+                  alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="https://google.com"
+                ><img
+                  class="w-6 h-6"
+                  src="./images/brand-linkedin.png"
+                  alt="linkedin"
+              /></a>
+            </li>
+            <li>
+              <a href="https://google.com"
+                ><img
+                  class="w-6 h-6"
+                  src="./images/brand-github.png"
+                  alt="github"
+              /></a>
+            </li>
+          </ul>
         </div>
-        <div class="space-y-9">
-          <section id="AboutBrand" class="justify-end flex flex-row-reverse text-orange-50">
-            <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[200px] p-2">
-              <h1 class="ml-2 text-lg">Description</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Explicabo, culpa? Veritatis totam error dolores odit. Quasi
-                suscipit, enim, harum quam corporis nobis voluptatibus, provident
-                deleniti soluta corrupti beatae exercitationem voluptatum?
-              </p>
-            </div>
-          </section>
-          <section id="Projects">
-            <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px] text-orange-50">
-              <v-carousel hide-delimiters style="height: 100%;">
-                <v-carousel-item v-for="projects in props.projects" :key="projects.id" class="CardItem">
-                  <div class="grid grid-rows-2 grid-flow-col gap-1">
-                    <img :src="projects.image" alt="imageProject"
-                      class="hover:animate-spin row-span-3 p-2 ml-2 mt-6 h-[250px] w-[250px] rounded-full object-contain object-center border-solid border-1 border-sky-400">
-                    <div class="col-span-2 mt-5">
-                      <h2>{{ projects.title }}</h2>
-                      <p>{{ projects.about }}</p>
-                    </div>
-                    <div class="row-span-2 col-span-2">
-                      <div class="flex space-x-2 p-0 ">
-                        <a :href="projects.linkView"><img class="w-8 h-8 bg-gray-500 rounded-full"
-                            src="./images/eye.png" alt=""></a>
-                        <a :href="projects.linkSource"><img class="w-8 h-8 bg-gray-500 rounded-full"
-                            src="./images/brand-github.png" alt=""></a>
-                      </div>
+      </div>
+      <div class="space-y-9">
+        <section
+          id="AboutBrand"
+          class="text-orange-50 border-1 border-solid border-sky-500 transition ease-in-out delay-150 hover:-translate-y-[2px] hover:scale-105 duration-500"
+        >
+          <div
+            class="border border-sky-400 bg-[#000000ed] w-[900px] h-[200px] p-2"
+          >
+            <h1 class="ml-2 text-lg">Description</h1>
+            <p class="gracinha tracking-wider flex">{{ props.userDesc }}</p>
+          </div>
+        </section>
+        <section id="Projects">
+          <div
+            class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px] text-orange-50"
+          >
+            <v-carousel hide-delimiters style="height: 100%">
+              <v-carousel-item
+                v-for="projects in props.projects"
+                :key="projects.id"
+                class="CardItem"
+              >
+                <div class="grid grid-rows-2 grid-flow-col gap-1">
+                  <img
+                    :src="projects.image"
+                    alt="imageProject"
+                    class="hover:animate-spin row-span-3 p-2 ml-2 mt-6 h-[250px] w-[250px] rounded-full object-contain object-center border-solid border-1 border-sky-400"
+                  />
+                  <div class="col-span-2 mt-5">
+                    <h2>{{ projects.title }}</h2>
+                    <p>{{ projects.about }}</p>
+                  </div>
+                  <div class="row-span-2 col-span-2">
+                    <div class="flex space-x-2 p-0">
+                      <a class="hover:animate-bounce" :href="projects.linkView"
+                        ><img
+                          class="w-8 h-8 bg-gray-500 rounded-full"
+                          src="./images/eye.png"
+                          alt=""
+                      /></a>
+                      <a
+                        class="hover:animate-bounce"
+                        :href="projects.linkSource"
+                        ><img
+                          class="w-8 h-8 bg-gray-500 rounded-full"
+                          src="./images/brand-github.png"
+                          alt=""
+                      /></a>
                     </div>
                   </div>
-                </v-carousel-item>
-              </v-carousel>
-            </div>
-          </section>
-          <section id="Skills">
-            <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
-              <div class="flex flex-col justify-center items-center p-2">
-                <h3 class="text-orange-50  tracking-widest mt-2 uppercase">skills and softskills</h3>
-                <div>
-                  <v-carousel class="Swiper" height="240" :show-arrows="false" cycle hide-delimiter-background hide-delimiters>
-                    <v-carousel-item v-for="skill in props.skills" :key="skill.id" class="text-orange-50 ">
-                      <v-sheet :color="skill.colorSkill" height="100%" class="Card">
-                        <div class="d-flex fill-height justify-center align-center space-x-5">
-                          <div class="flex flex-col justify-center items-center space-y-5">
-                            <img :src="skill.image" class="w-[50px] h-[50px] " alt="">
-                            <h2 class="tracking-widest lowercase ">
-                              {{ skill.title }}
-                            </h2>
-                            <div>{{skill.percent}}</div>
-                          </div>
-                          <div>
-                            <p>{{skill.description}}</p>
-                          </div>
-                        </div>
-                      </v-sheet>
-                    </v-carousel-item>
-                  </v-carousel>
                 </div>
+              </v-carousel-item>
+            </v-carousel>
+          </div>
+        </section>
+        <section id="Skills">
+          <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
+            <div class="flex flex-col justify-center items-center p-2">
+              <h3 class="text-orange-50 tracking-widest mt-2 uppercase">
+                skills and softskills
+              </h3>
+              <div>
+                <v-carousel
+                  class="Swiper"
+                  height="240"
+                  :show-arrows="false"
+                  cycle
+                  hide-delimiter-background
+                  hide-delimiters
+                >
+                  <v-carousel-item
+                    v-for="skill in props.skills"
+                    :key="skill.id"
+                    class="text-orange-50"
+                  >
+                    <v-sheet
+                      :color="skill.colorSkill"
+                      height="100%"
+                      class="Card"
+                    >
+                      <div
+                        class="d-flex fill-height justify-center align-center space-x-5"
+                      >
+                        <div
+                          class="flex flex-col justify-center items-center space-y-5"
+                        >
+                          <img
+                            :src="skill.image"
+                            class="w-[50px] h-[50px]"
+                            alt=""
+                          />
+                          <h2 class="tracking-widest lowercase">
+                            {{ skill.title }}
+                          </h2>
+                          <div>{{ skill.percent }}</div>
+                        </div>
+                        <div>
+                          <p>{{ skill.description }}</p>
+                        </div>
+                      </div>
+                    </v-sheet>
+                  </v-carousel-item>
+                </v-carousel>
               </div>
             </div>
-          </section>
-          <section id="Certifies">
-            <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
-              <div class="flex justify-center p-2">
-                <h3 class="text-orange-50 tracking-widest mt-4 uppercase">certificados</h3>
-              </div>
+          </div>
+        </section>
+        <section id="Certifies">
+          <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
+            <div class="flex justify-center p-2">
+              <h3 class="text-orange-50 tracking-widest mt-2 uppercase">
+                certificados
+              </h3>
             </div>
-          </section>
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
     </section>
   </v-app>
 </template>
 <style scoped>
+.gracinha {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 .About {
   color: #fff9f9;
 }
 .Swiper {
-  width: 80vh!important;
+  width: 80vh !important;
   max-width: 400px;
 }
 .Card {
-  color: #fff9f9!important;
+  color: #fff9f9 !important;
 }
 .CardItem {
   height: 100%;
@@ -156,12 +258,6 @@ onMounted(() => {
   justify-content: center;
   align-content: center;
 }
-
-.NavIten {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 
 .Infos {
   justify-content: space-around;

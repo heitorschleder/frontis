@@ -2,6 +2,7 @@ export interface CorpoProps {
     userName: string;
     userPhoto: string;
     userEspec: string;
+    userDesc: string;
     projects: Projects[];
     skills: Skills[];
 }
@@ -25,6 +26,7 @@ export const corpoProps = {
     userName: 'Heitor teste',
     userPhoto: "https://kronus.kebook.com.br/assets/8898e345-c657-4704-be94-a853cca535b5.png",
     userEspec: "Dev",
+    userDesc: "Olá! Meu nome é Heitor de Oliveira Schleder sou estudante de Data Science e profissional na área de desenvolvimento Web focado na parte de Front End. Trabalho com diversas linguagens de programação dentre elas estão: Javascript, PhP, Java, SQL e alguns frameworks como Vue.js e Wordpress. Sou extremamente interessado em aprender novas tecnologias e estou sempre estudando para me manter atualizado nas demandas do mercado.",
     skills: [{
         id: 1,
         colorSkill: "#00000000",
