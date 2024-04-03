@@ -82,7 +82,7 @@ onMounted(() => {
                 <v-carousel-item v-for="projects in props.projects" :key="projects.id" class="CardItem">
                   <div class="grid grid-rows-2 grid-flow-col gap-1">
                     <img :src="projects.image" alt="imageProject"
-                      class="row-span-3 p-2 ml-2 mt-6 h-[250px] w-[250px] rounded-full object-contain object-center border-solid border-1 border-sky-400">
+                      class="hover:animate-spin row-span-3 p-2 ml-2 mt-6 h-[250px] w-[250px] rounded-full object-contain object-center border-solid border-1 border-sky-400">
                     <div class="col-span-2 mt-5">
                       <h2>{{ projects.title }}</h2>
                       <p>{{ projects.about }}</p>
@@ -103,14 +103,21 @@ onMounted(() => {
           <section id="Skills">
             <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
               <div class="flex flex-col justify-center items-center p-2">
-                <h3 class="text-orange-50">Skills and SoftSkills</h3>
+                <h3 class="text-orange-50  tracking-widest mt-2 uppercase">skills and softskills</h3>
                 <div>
-                  <v-carousel class="Swiper" height="240" show-arrows="hover" cycle hide-delimiter-background>
+                  <v-carousel class="Swiper" height="240" :show-arrows="false" cycle hide-delimiter-background hide-delimiters>
                     <v-carousel-item v-for="skill in props.skills" :key="skill.id" class="text-orange-50 ">
                       <v-sheet :color="skill.colorSkill" height="100%" class="Card">
-                        <div class="d-flex fill-height justify-center align-center">
-                          <div class="text-h2">
-                            {{ skill.title }}
+                        <div class="d-flex fill-height justify-center align-center space-x-5">
+                          <div class="flex flex-col justify-center items-center space-y-5">
+                            <img :src="skill.image" class="w-[50px] h-[50px] " alt="">
+                            <h2 class="tracking-widest lowercase ">
+                              {{ skill.title }}
+                            </h2>
+                            <div>{{skill.percent}}</div>
+                          </div>
+                          <div>
+                            <p>{{skill.description}}</p>
                           </div>
                         </div>
                       </v-sheet>
@@ -123,7 +130,7 @@ onMounted(() => {
           <section id="Certifies">
             <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
               <div class="flex justify-center p-2">
-                <h3 class="text-orange-50">Certificados</h3>
+                <h3 class="text-orange-50 tracking-widest mt-4 uppercase">certificados</h3>
               </div>
             </div>
           </section>
@@ -132,12 +139,13 @@ onMounted(() => {
     </section>
   </v-app>
 </template>
-<style>
+<style scoped>
 .About {
   color: #fff9f9;
 }
 .Swiper {
-  width: 40vw!important;
+  width: 80vh!important;
+  max-width: 400px;
 }
 .Card {
   color: #fff9f9!important;
@@ -147,10 +155,6 @@ onMounted(() => {
   display: flex !important;
   justify-content: center;
   align-content: center;
-}
-
-.v-carousel__controls {
-  display: none !important;
 }
 
 .NavIten {
