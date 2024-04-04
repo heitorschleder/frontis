@@ -112,7 +112,7 @@ onMounted(() => {
           <div
             class="border border-sky-400 bg-[#000000ed] w-[900px] h-[200px] p-2"
           >
-            <h1 class="ml-2 text-lg">Description</h1>
+            <h1 class="ml-2 text-lg tracking-wider">descrição</h1>
             <p class="gracinha tracking-wider flex">{{ props.userDesc }}</p>
           </div>
         </section>
