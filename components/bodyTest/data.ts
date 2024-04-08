@@ -1,4 +1,4 @@
-export interface CorpoProps {
+export interface BodyTestProps {
     userName: string;
     userPhoto: string;
     userEspec: string;
@@ -22,7 +22,7 @@ export interface Projects {
     linkView: string;
     linkSource: string;
 }
-export const corpoProps = {
+export const bodyTestProps = {
     userName: 'Heitor teste',
     userPhoto: "https://kronus.kebook.com.br/assets/8898e345-c657-4704-be94-a853cca535b5.png",
     userEspec: "Dev",
@@ -148,4 +148,4 @@ export const corpoProps = {
         linkSource: "https://github.com/heitorschleder/portfolio"
     },
     ],
-} as CorpoProps;
+} as BodyTestProps;

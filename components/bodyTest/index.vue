@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { CorpoProps } from "./data";
+import { BodyTestProps } from "./data";
 import { onMounted } from "vue";
 import { ref } from "vue";
 defineProps({
-  props: { type: Object as PropType<CorpoProps>, required: true },
+  props: { type: Object as PropType<BodyTestProps>, required: true },
 });
 const playAudioOnClick = () => {
   const audio: HTMLAudioElement | null = document.getElementById(
@@ -105,8 +105,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="space-y-9">
-        <section
-          id="AboutBrand"
+        <section id="AboutBrand"
           class="text-orange-50 border-1 border-solid border-sky-500 transition ease-in-out delay-150 hover:-translate-y-[2px] hover:scale-105 duration-500"
         >
           <div

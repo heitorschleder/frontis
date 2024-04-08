@@ -1,6 +1,6 @@
 <template>
-    <ResolveWithProps componentName="Corpo" :props="corpoProps" />
+    <ResolveWithProps componentName="BodyTest" :props="bodyTestProps" />
 </template>
 <script setup lang="ts">
-import { corpoProps } from '~/components/corpo/data';
+import { bodyTestProps } from '~/components/bodyTest/data';
 </script>

@@ -9,12 +9,12 @@ export const getHostPath = () => {
     } else {
         host = window.location.host;
     }
-    /*Adicionar domínios permitidos*/
+   
     const allowedDomains = (runtimeConfig.public.PUBLIC_ALLOWED_DOMAINS || ['localhost']) as string[];
 
     if (allowedDomains.some(allowedDomain => host.includes(`.` + allowedDomain))) {
         const subdomain = host.split(".")[0];
-        host = `${subdomain}.kebook.com.br`;
+        host = `${subdomain}.lilprog.com.br`;
     }
     let path = (useRoute().params.all as string[] || []).join('/');
     while (path.endsWith("/")) {
