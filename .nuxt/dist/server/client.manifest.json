@@ -6,10 +6,10 @@
     "module": true,
     "resourceType": "script"
   },
-  "C:/Users/heitor.schleder/Documents/lilprog/kronus-compose/frontis/node_modules/nuxt/dist/app/entry.js": {
+  "C:/Users/heitor.schleder/Documents/lilprog/manager-lilprog/frontis/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "isEntry": true,
-    "file": "C:/Users/heitor.schleder/Documents/lilprog/kronus-compose/frontis/node_modules/nuxt/dist/app/entry.js"
+    "file": "C:/Users/heitor.schleder/Documents/lilprog/manager-lilprog/frontis/node_modules/nuxt/dist/app/entry.js"
   }
 }

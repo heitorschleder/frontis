@@ -105,7 +105,8 @@ onMounted(() => {
         </div>
       </div>
       <div class="space-y-9">
-        <section id="AboutBrand"
+        <section
+          id="AboutBrand"
           class="text-orange-50 border-1 border-solid border-sky-500 transition ease-in-out delay-150 hover:-translate-y-[2px] hover:scale-105 duration-500"
         >
           <div
@@ -214,8 +215,42 @@ onMounted(() => {
           <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
             <div class="flex justify-center p-2">
               <h3 class="text-orange-50 tracking-widest mt-2 uppercase">
-                certificados
+                formações<br> & <span>certificados</span>
               </h3>
+              <div class="flex space-x-5">
+                <div class="flex-1">
+                  <a
+                    class="text-slate-100 no-underline"
+                    href="https://google.com"
+                  >
+                    <img
+                      class="w-[350px] h-[150px] rounded grayscale hover:scale-[1.1]"
+                      src="https://matriculas.estacio.br/blog/wp-content/uploads/2020/02/30est01-ciencia-dados.jpg"
+                      alt=""
+                    />
+                    <div class="space-y-12">
+                      <h4 class="mt-2">Técnologo em Ciência de Dados</h4>
+                      <h5>Data da Conclusão: 06/2024</h5>
+                    </div>
+                  </a>
+                </div>
+                <div class="flex-1">
+                  <a
+                    class="text-slate-100 no-underline"
+                    href="https://google.com"
+                  >
+                    <img
+                      class="w-[350px] h-[150px] rounded grayscale hover:scale-[1.1]"
+                      src="https://img-c.udemycdn.com/course/480x270/2037548_028f.jpg"
+                      alt=""
+                    />
+                    <div class="space-y-5">
+                      <h4 class="mt-2">Curso Vue JS 2 - O Guia Completo (incl. Vue Router & Vuex)</h4>
+                      <h5>46 horas</h5>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -1,1 +1,1 @@
-export { default } from "file:///C:/Users/heitor.schleder/Documents/lilprog/kronus-compose/frontis/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
+export { default } from "file:///C:/Users/heitor.schleder/Documents/lilprog/manager-lilprog/frontis/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
