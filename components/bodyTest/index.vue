@@ -56,7 +56,7 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section id="PhotoAndSocials" class="Infos flex">
+    <aside id="PhotoAndSocials" class="Infos flex">
       <div
         class="DivLasteral border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0"
       >
@@ -69,36 +69,12 @@ onMounted(() => {
           <h3>{{ props.userName }}</h3>
           <h4>{{ props.userEspec }}</h4>
           <ul class="flex space-x-2 p-0">
-            <li>
+            <li v-for="">
               <a href="https://google.com"
                 ><img
                   class="w-6 h-6"
                   src="./images/brand-facebook.png"
                   alt="facebook"
-              /></a>
-            </li>
-            <li>
-              <a href="https://google.com"
-                ><img
-                  class="w-6 h-6"
-                  src="./images/brand-instagram.png"
-                  alt="instagram"
-              /></a>
-            </li>
-            <li>
-              <a href="https://google.com"
-                ><img
-                  class="w-6 h-6"
-                  src="./images/brand-linkedin.png"
-                  alt="linkedin"
-              /></a>
-            </li>
-            <li>
-              <a href="https://google.com"
-                ><img
-                  class="w-6 h-6"
-                  src="./images/brand-github.png"
-                  alt="github"
               /></a>
             </li>
           </ul>
@@ -170,7 +146,7 @@ onMounted(() => {
                   class="Swiper"
                   height="240"
                   :show-arrows="false"
-                  cycle
+                  cycleP
                   hide-delimiter-background
                   hide-delimiters
                 >
@@ -212,11 +188,12 @@ onMounted(() => {
           </div>
         </section>
         <section id="Certifies">
-          <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
+          <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px] text-center">
+            <h3 class=" mt-2 font-bold tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500">
+                formações & certificados
+            </h3>
             <div class="flex justify-center p-2">
-              <h3 class="text-orange-50 tracking-widest mt-2 uppercase">
-                formações<br> & <span>certificados</span>
-              </h3>
+              
               <div class="flex space-x-5">
                 <div class="flex-1">
                   <a
@@ -224,13 +201,13 @@ onMounted(() => {
                     href="https://google.com"
                   >
                     <img
-                      class="w-[350px] h-[150px] rounded grayscale hover:scale-[1.1]"
+                      class="w-[350px] h-[150px] rounded grayscale hover:scale-[1.1] duration-300"
                       src="https://matriculas.estacio.br/blog/wp-content/uploads/2020/02/30est01-ciencia-dados.jpg"
                       alt=""
                     />
-                    <div class="space-y-12">
-                      <h4 class="mt-2">Técnologo em Ciência de Dados</h4>
-                      <h5>Data da Conclusão: 06/2024</h5>
+                    <div class="relative h-250 w-450 text-center">
+                      <h5 class="mt-2">Técnologo em Ciência de Dados</h5>
+                      <h5 class="absolute inset-x-0 -bottom-[50px]">Data da Conclusão: 06/2024</h5>
                     </div>
                   </a>
                 </div>
@@ -240,13 +217,13 @@ onMounted(() => {
                     href="https://google.com"
                   >
                     <img
-                      class="w-[350px] h-[150px] rounded grayscale hover:scale-[1.1]"
+                      class="w-[350px] h-[150px] rounded grayscale hover:scale-[1.1] duration-300"
                       src="https://img-c.udemycdn.com/course/480x270/2037548_028f.jpg"
                       alt=""
                     />
-                    <div class="space-y-5">
-                      <h4 class="mt-2">Curso Vue JS 2 - O Guia Completo (incl. Vue Router & Vuex)</h4>
-                      <h5>46 horas</h5>
+                    <div class="relative h-250 w-450 text-center">
+                      <h5 class="mt-2 ">Curso Vue JS 2 - O Guia Completo</h5>
+                      <h5 class="absolute inset-x-0 -bottom-[50px]">46 horas</h5>
                     </div>
                   </a>
                 </div>
@@ -255,7 +232,7 @@ onMounted(() => {
           </div>
         </section>
       </div>
-    </section>
+    </aside>
   </v-app>
 </template>
 <style scoped>
