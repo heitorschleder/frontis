@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { BodyTestProps } from "./data";
-import { onMounted } from "vue";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 defineProps({
   props: { type: Object as PropType<BodyTestProps>, required: true },
 });
+
+const pageLoaded = ref(true);
+
 const playAudioOnClick = () => {
   const audio: HTMLAudioElement | null = document.getElementById(
     "myAudio"
@@ -15,6 +17,8 @@ const playAudioOnClick = () => {
 };
 onMounted(() => {
   playAudioOnClick();
+  console.log('pagina carrega bosta')
+  pageLoaded.value = false; 
 });
 </script>
 <template>
@@ -61,7 +65,7 @@ onMounted(() => {
         class="DivLasteral border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0"
       >
         <div class="About flex flex-col justify-center items-center mt-60">
-          <img
+          <img v-if="props.userPhoto"
             class="w-[250px] h-[250px]"
             :src="props.userPhoto"
             alt="userPhoto"
@@ -69,12 +73,12 @@ onMounted(() => {
           <h3>{{ props.userName }}</h3>
           <h4>{{ props.userEspec }}</h4>
           <ul class="flex space-x-2 p-0">
-            <li v-for="">
-              <a href="https://google.com"
+            <li v-for="socials in props.socials" :key="socials.socialId">
+              <a :href="socials.socialLink"
                 ><img
                   class="w-6 h-6"
-                  src="./images/brand-facebook.png"
-                  alt="facebook"
+                  :src="socials.socialImage"
+                  :alt="`${socials.type}-icon`"
               /></a>
             </li>
           </ul>
