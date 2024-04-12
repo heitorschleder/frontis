@@ -3,6 +3,8 @@ export interface BodyTestProps {
     userPhoto: string;
     userEspec: string;
     userDesc: string;
+    aboutTitle: string;
+    titleCert: string;
     socials: Socials[];
     projects: Projects[];
     skills: Skills[];
@@ -34,6 +36,8 @@ export const bodyTestProps = {
     userPhoto: "https://kronus.kebook.com.br/assets/8898e345-c657-4704-be94-a853cca535b5.png",
     userEspec: "Dev",
     userDesc: "Olá! Meu nome é Heitor de Oliveira Schleder sou estudante de Data Science e profissional na área de desenvolvimento Web focado na parte de Front End. Trabalho com diversas linguagens de programação dentre elas estão: Javascript, PhP, Java, SQL e alguns frameworks como Vue.js e Wordpress. Sou extremamente interessado em aprender novas tecnologias e estou sempre estudando para me manter atualizado nas demandas do mercado.",
+    aboutTitle: "descrição",
+    titleCert: "formações & certificados",
     socials: [{
         socialId: 1,
         type: "facebook",

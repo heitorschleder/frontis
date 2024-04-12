@@ -5,8 +5,6 @@ defineProps({
   props: { type: Object as PropType<BodyTestProps>, required: true },
 });
 
-const pageLoaded = ref(true);
-
 const playAudioOnClick = () => {
   const audio: HTMLAudioElement | null = document.getElementById(
     "myAudio"
@@ -17,8 +15,6 @@ const playAudioOnClick = () => {
 };
 onMounted(() => {
   playAudioOnClick();
-  console.log('pagina carrega bosta')
-  pageLoaded.value = false; 
 });
 </script>
 <template>
@@ -92,7 +88,7 @@ onMounted(() => {
           <div
             class="border border-sky-400 bg-[#000000ed] w-[900px] h-[200px] p-2"
           >
-            <h1 class="ml-2 text-lg tracking-wider">descrição</h1>
+            <h1 class="ml-2 text-lg tracking-wider">{{ props.aboutTitle }}</h1>
             <p class="gracinha tracking-wider flex">{{ props.userDesc }}</p>
           </div>
         </section>
@@ -122,7 +118,7 @@ onMounted(() => {
                         ><img
                           class="w-8 h-8 bg-gray-500 rounded-full"
                           src="./images/eye.png"
-                          alt=""
+                          alt="linktoviewtheproject"
                       /></a>
                       <a
                         class="hover:animate-bounce"
@@ -130,7 +126,7 @@ onMounted(() => {
                         ><img
                           class="w-8 h-8 bg-gray-500 rounded-full"
                           src="./images/brand-github.png"
-                          alt=""
+                          alt="linktoviewthesourcecode"
                       /></a>
                     </div>
                   </div>
@@ -194,7 +190,7 @@ onMounted(() => {
         <section id="Certifies">
           <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px] text-center">
             <h3 class=" mt-2 font-bold tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500">
-                formações & certificados
+                {{ props.titleCert }}
             </h3>
             <div class="flex justify-center p-2">
               
