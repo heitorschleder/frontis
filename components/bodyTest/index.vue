@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { UsersHandler } from "@directus/sdk";
 import { BodyTestProps } from "./data";
 import { onMounted, ref } from "vue";
 defineProps({
@@ -26,36 +27,6 @@ onMounted(() => {
       <source src="./images/song.mp3" type="audio/mp3" />
     </audio>
     </div>  -->
-    <section id="Navegator">
-      <div class="flex flex-row-reverse p-6">
-        <div
-          class="bg-[#000000ed] border-solid border-1 border-sky-400 h-10 w-[450px] flex justify-start"
-        >
-          <nav class="flex space-x-10 p-2">
-            <a
-              class="NavIten text-slate-100 no-underline pl-8 hover:text-blue-600 hover:animate-[wiggle_1s_ease-in-out_infinite]"
-              href="#About"
-              >Sobre</a
-            >
-            <a
-              class="NavIten text-slate-100 no-underline pl-0 hover:text-blue-600 hover:animate-[wiggle_1s_ease-in-out_infinite]"
-              href="#Projects"
-              >Projects</a
-            >
-            <a
-              class="NavIten text-slate-100 no-underline pl-0 hover:text-blue-600 hover:animate-[wiggle_1s_ease-in-out_infinite]"
-              href="#Certifies"
-              >Certifies</a
-            >
-            <a
-              class="NavIten text-slate-100 no-underline pl-0 hover:text-blue-600 hover:animate-[wiggle_1s_ease-in-out_infinite]"
-              href="#Skills"
-              >Skills</a
-            >
-          </nav>
-        </div>
-      </div>
-    </section>
     <aside id="PhotoAndSocials" class="Infos flex">
       <div
         class="DivLasteral border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0"
@@ -81,17 +52,10 @@ onMounted(() => {
         </div>
       </div>
       <div class="space-y-9">
-        <section
-          id="AboutBrand"
-          class="text-orange-50 border-1 border-solid border-sky-500 transition ease-in-out delay-150 hover:-translate-y-[2px] hover:scale-105 duration-500"
-        >
-          <div
-            class="border border-sky-400 bg-[#000000ed] w-[900px] h-[200px] p-2"
-          >
-            <h1 class="ml-2 text-lg tracking-wider">{{ props.aboutTitle }}</h1>
-            <p class="gracinha tracking-wider flex">{{ props.userDesc }}</p>
-          </div>
-        </section>
+        <AboutBrand :props="{
+          aboutTitle: props.aboutTitle,
+          userDesc: props.userDesc,
+        }"/>
         <section id="Projects">
           <div
             class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px] text-orange-50"
@@ -236,26 +200,6 @@ onMounted(() => {
   </v-app>
 </template>
 <style scoped>
-.gracinha {
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-.About {
-  color: #fff9f9;
-}
 .Swiper {
   width: 80vh !important;
   max-width: 400px;
