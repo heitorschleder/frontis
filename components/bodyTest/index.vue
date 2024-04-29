@@ -17,6 +17,13 @@ const playAudioOnClick = () => {
 onMounted(() => {
   playAudioOnClick();
 });
+
+let numbers = [10, 10, 10];
+const someall = numbers.reduce((ind, numbersito) => { return ind + numbersito;});
+const mediall = someall / numbers.length;
+console.log(mediall)
+
+
 </script>
 <template>
   <v-app id="MainBody" class="w-[100%] h-[100%] p-3">
@@ -29,7 +36,7 @@ onMounted(() => {
     </div>  -->
     <aside id="PhotoAndSocials" class="Infos flex">
       <div
-        class="DivLasteral border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0"
+        class="DivLasteral text-orange-50 border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0"
       >
         <div class="About flex flex-col justify-center items-center mt-60">
           <img v-if="props.userPhoto"
