@@ -1,5 +1,5 @@
 
-import { defuFn } from 'C:/Users/heitor.schleder/Documents/stud/frontis/node_modules/defu/dist/defu.mjs'
+import { defuFn } from 'C:/Users/Heitor Schleder/Documents/manager-lilprog/frontis/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 
