@@ -56,7 +56,7 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section id="PhotoAndSocials" class="Infos flex">
+    <section id="PhotoAndSocials" class="Infos flex ">
       <div
         class="DivLasteral border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0"
       >
