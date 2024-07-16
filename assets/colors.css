@@ -1,36 +1,3 @@
 :root{
-    --cor-1: #ff8b00;
-    --cor-2: #ff4600;
-    --cor-texto-btn-1: #fff;
-    --cor-texto-btn-2: #fff;
-    --cor-texto-1: #ffffff;
-    --cor-texto-2: #ffffff;
-    --cor-geral-texto: #3e464f;
-    --cor-footer: #F2521E;
-    --cor-texto-footer: #fff;
-    --cor-subtitle-header-expert: #ff8b00;
-    --cor-title-header-expert: #16164E;
-    --cor-desc-header-expert: #16164E;
-    --cor-menu-items-header-expert: #16164E;
-    --cor-menu-items-hover-header-expert: #ff8b00;
-    --cor-botao-principal: #ff8b00;
-    --cor-botao-hover: #ff4600;
-    --cor-title-sobre-expert: #16164E;
-    --cor-desc-sobre-expert: #16164E;
-    --cor-subtitle-conteudo-expert: #ff8b00;
-    --cor-title-conteudo-expert: #16164E;
-    --cor-botoes-conteudo-expert: #ff8b00;
-    --cor-hover-botoes-conteudo-expert: #ff4600;
-    --cor-texto-botoes-conteudo-expert: #16164E;
-    --cor-texto-hover-botoes-conteudo-expert: #ffffff;
-    --cor-subtitle-depos-expert: #ff8b00;
-    --cor-title-depos-expert: #16164E;
-    --cor-subtitle-contato-expert: #ff8b00;
-    --cor-title-contato-expert: #16164E;
-    --cor-title-conheca-expert: #16164E;
-    --cor-desc-conheca-expert: #16164E;
-    --cor-subtitle-afiliados-expert: #ff8b00;
-    --cor-texto-afiliados-expert: #fff;
-    --cor-btn-afiliados-expert: #ff8b00;
-    --cor-hover-btn-afiliados-expert: #ff4600;
+    
 }
