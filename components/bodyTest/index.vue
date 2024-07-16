@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { CorpoProps } from "./data";
-import { onMounted } from "vue";
-import { ref } from "vue";
+import { UsersHandler } from "@directus/sdk";
+import { BodyTestProps } from "./data";
+import { onMounted, ref } from "vue";
 defineProps({
-  props: { type: Object as PropType<CorpoProps>, required: true },
+  props: { type: Object as PropType<BodyTestProps>, required: true },
 });
+
 const playAudioOnClick = () => {
   const audio: HTMLAudioElement | null = document.getElementById(
     "myAudio"
@@ -16,6 +17,13 @@ const playAudioOnClick = () => {
 onMounted(() => {
   playAudioOnClick();
 });
+
+let numbers = [10, 10, 10];
+const someall = numbers.reduce((ind, numbersito) => { return ind + numbersito;});
+const mediall = someall / numbers.length;
+console.log(mediall)
+
+
 </script>
 <template>
   <v-app id="MainBody" class="w-[100%] h-[100%] p-3">
@@ -56,12 +64,12 @@ onMounted(() => {
         </div>
       </div>
     </section>
-    <section id="PhotoAndSocials" class="Infos flex ">
+    <aside id="PhotoAndSocials" class="Infos flex">
       <div
-        class="DivLasteral border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0"
+        class="DivLasteral text-orange-50 border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0 pl-8"
       >
         <div class="About flex flex-col justify-center items-center mt-60">
-          <img
+          <img v-if="props.userPhoto"
             class="w-[250px] h-[250px]"
             :src="props.userPhoto"
             alt="userPhoto"
@@ -69,53 +77,22 @@ onMounted(() => {
           <h3>{{ props.userName }}</h3>
           <h4>{{ props.userEspec }}</h4>
           <ul class="flex space-x-2 p-0">
-            <li>
-              <a href="https://google.com"
+            <li v-for="socials in props.socials" :key="socials.socialId">
+              <a :href="socials.socialLink"
                 ><img
                   class="w-6 h-6"
-                  src="./images/brand-facebook.png"
-                  alt="facebook"
-              /></a>
-            </li>
-            <li>
-              <a href="https://google.com"
-                ><img
-                  class="w-6 h-6"
-                  src="./images/brand-instagram.png"
-                  alt="instagram"
-              /></a>
-            </li>
-            <li>
-              <a href="https://google.com"
-                ><img
-                  class="w-6 h-6"
-                  src="./images/brand-linkedin.png"
-                  alt="linkedin"
-              /></a>
-            </li>
-            <li>
-              <a href="https://google.com"
-                ><img
-                  class="w-6 h-6"
-                  src="./images/brand-github.png"
-                  alt="github"
+                  :src="socials.socialImage"
+                  :alt="`${socials.type}-icon`"
               /></a>
             </li>
           </ul>
         </div>
       </div>
       <div class="space-y-9">
-        <section
-          id="AboutBrand"
-          class="text-orange-50 border-1 border-solid border-sky-500 transition ease-in-out delay-150 hover:-translate-y-[2px] hover:scale-105 duration-500"
-        >
-          <div
-            class="border border-sky-400 bg-[#000000ed] w-[900px] h-[200px] p-2"
-          >
-            <h1 class="ml-2 text-lg">Description</h1>
-            <p class="gracinha tracking-wider flex">{{ props.userDesc }}</p>
-          </div>
-        </section>
+        <AboutBrand :props="{
+          aboutTitle: props.aboutTitle,
+          userDesc: props.userDesc,
+        }"/>
         <section id="Projects">
           <div
             class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px] text-orange-50"
@@ -142,7 +119,7 @@ onMounted(() => {
                         ><img
                           class="w-8 h-8 bg-gray-500 rounded-full"
                           src="./images/eye.png"
-                          alt=""
+                          alt="linktoviewtheproject"
                       /></a>
                       <a
                         class="hover:animate-bounce"
@@ -150,7 +127,7 @@ onMounted(() => {
                         ><img
                           class="w-8 h-8 bg-gray-500 rounded-full"
                           src="./images/brand-github.png"
-                          alt=""
+                          alt="linktoviewthesourcecode"
                       /></a>
                     </div>
                   </div>
@@ -170,7 +147,7 @@ onMounted(() => {
                   class="Swiper"
                   height="240"
                   :show-arrows="false"
-                  cycle
+                  cycleP
                   hide-delimiter-background
                   hide-delimiters
                 >
@@ -212,39 +189,54 @@ onMounted(() => {
           </div>
         </section>
         <section id="Certifies">
-          <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
+          <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px] text-center">
+            <h3 class=" mt-2 font-bold tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500">
+                {{ props.titleCert }}
+            </h3>
             <div class="flex justify-center p-2">
-              <h3 class="text-orange-50 tracking-widest mt-2 uppercase">
-                certificados
-              </h3>
+              
+              <div class="flex space-x-5">
+                <div class="flex-1">
+                  <a
+                    class="text-slate-100 no-underline"
+                    href="https://google.com"
+                  >
+                    <img
+                      class="w-[350px] h-[150px] rounded grayscale hover:scale-[1.1] duration-300"
+                      src="https://matriculas.estacio.br/blog/wp-content/uploads/2020/02/30est01-ciencia-dados.jpg"
+                      alt=""
+                    />
+                    <div class="relative h-250 w-450 text-center">
+                      <h5 class="mt-2">Técnologo em Ciência de Dados</h5>
+                      <h5 class="absolute inset-x-0 -bottom-[50px]">Data da Conclusão: 06/2024</h5>
+                    </div>
+                  </a>
+                </div>
+                <div class="flex-1">
+                  <a
+                    class="text-slate-100 no-underline"
+                    href="https://google.com"
+                  >
+                    <img
+                      class="w-[350px] h-[150px] rounded grayscale hover:scale-[1.1] duration-300"
+                      src="https://img-c.udemycdn.com/course/480x270/2037548_028f.jpg"
+                      alt=""
+                    />
+                    <div class="relative h-250 w-450 text-center">
+                      <h5 class="mt-2 ">Curso Vue JS 2 - O Guia Completo</h5>
+                      <h5 class="absolute inset-x-0 -bottom-[50px]">46 horas</h5>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
-    </section>
+    </aside>
   </v-app>
 </template>
 <style scoped>
-.gracinha {
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-.About {
-  color: #fff9f9;
-}
 .Swiper {
   width: 80vh !important;
   max-width: 400px;
