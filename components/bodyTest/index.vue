@@ -26,7 +26,7 @@ console.log(mediall)
 
 </script>
 <template>
-  <v-app id="MainBody" class="w-[100%] h-[100%] p-3">
+  <v-app id="MainBody" class="w-[100%] h-[90%] p-3">
     <!-- <div class="">
      lembrar de dar hidden nessa parada de musica ai
     <button @click="playAudioOnClick">Play Audio</button>
@@ -34,7 +34,7 @@ console.log(mediall)
       <source src="./images/song.mp3" type="audio/mp3" />
     </audio>
     </div>  -->
-    <section id="Navegator">
+    <!-- <section id="Navegator">
       <div class="flex flex-row-reverse p-6">
         <div
           class="bg-[#000000ed] border-solid border-1 border-sky-400 h-10 w-[450px] flex justify-start"
@@ -63,10 +63,10 @@ console.log(mediall)
           </nav>
         </div>
       </div>
-    </section>
+    </section> -->
     <aside id="PhotoAndSocials" class="Infos flex">
       <div
-        class="DivLasteral text-orange-50 border-solid border-1 border-sky-400 h-[100vh] w-80 mt-0 pl-8"
+        class="DivLasteral text-orange-50 border-solid border-1 border-sky-400  w-80 mt-0 pl-8"
       >
         <div class="About flex flex-col justify-center items-center mt-60">
           <img v-if="props.userPhoto"
@@ -136,7 +136,7 @@ console.log(mediall)
             </v-carousel>
           </div>
         </section>
-        <section id="Skills">
+        <!-- <section id="Skills">
           <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px]">
             <div class="flex flex-col justify-center items-center p-2">
               <h3 class="text-orange-50 tracking-widest mt-2 uppercase">
@@ -187,7 +187,7 @@ console.log(mediall)
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <section id="Certifies">
           <div class="border border-sky-400 bg-[#000000ed] w-[900px] h-[300px] text-center">
             <h3 class=" mt-2 font-bold tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500">

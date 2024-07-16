@@ -6,10 +6,10 @@
     "module": true,
     "resourceType": "script"
   },
-  "C:/Users/Heitor Schleder/Documents/Estudos/Front/frontis/node_modules/nuxt/dist/app/entry.js": {
+  "C:/Users/Heitor Schleder/Documents/manager-lilprog/frontis/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "isEntry": true,
-    "file": "C:/Users/Heitor Schleder/Documents/Estudos/Front/frontis/node_modules/nuxt/dist/app/entry.js"
+    "file": "C:/Users/Heitor Schleder/Documents/manager-lilprog/frontis/node_modules/nuxt/dist/app/entry.js"
   }
 }
