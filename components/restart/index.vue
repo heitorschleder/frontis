@@ -5,27 +5,27 @@ defineProps({
 });
 </script>
 <template>
-  <div class="grid justify-center xl:flex xl:justify-center bg-slate-300 xl:h-[100vh]">
-    <div id="LeftPart" class="flex p-4 items-center justify-center bg-slate-300">
+  <div class="BodySide grid justify-center xl:flex xl:justify-center xl:h-[100vh]">
+    <div id="LeftPart" class="flex p-4 items-center justify-center">
       <div class="flex-col text-center justify-center items-center p-2 ">
         <img v-if="props.userPhoto" class="max-h-60 max-w-60 mb-6 rounded-full" :src="props.userPhoto" alt="userPhoto" />
         <h3>{{ props.userName }}</h3>
         <h4>{{ props.userEspec }}</h4>
         <ul class="flex justify-center space-x-2 p-0">
           <li v-if="props.linkFace">
-            <a :href="props.linkFace"><img class=" bg-[#172236] rounded-full p-1 w-8 h-8 hover:-translate-y-[2px]"
+            <a :href="props.linkFace"><img class=" ButtonsColor rounded-full p-1 w-8 h-8 hover:-translate-y-[2px]"
                 src="./images/brand-facebook.png" alt="linkFace" /></a>
           </li>
           <li v-if="props.linkGithub">
-            <a :href="props.linkGithub"><img class=" bg-[#172236] rounded-full p-1 w-8 h-8 hover:-translate-y-[2px]"
+            <a :href="props.linkGithub"><img class=" ButtonsColor rounded-full p-1 w-8 h-8 hover:-translate-y-[2px]"
                 src="./images/brand-github.png" alt="linkGithub" /></a>
           </li>
           <li v-if="props.linkLinkedin">
-            <a :href="props.linkLinkedin"><img class=" bg-[#172236] rounded-full p-1 w-8 h-8 hover:-translate-y-[2px]"
+            <a :href="props.linkLinkedin"><img class=" ButtonsColor rounded-full p-1 w-8 h-8 hover:-translate-y-[2px]"
                 src="./images/brand-linkedin.png" alt="linkLinkedin" /></a>
           </li>
           <li v-if="props.linkInsta">
-            <a :href="props.linkInsta"><img class=" bg-[#172236] rounded-full p-1 w-8 h-8 hover:-translate-y-[2px]"
+            <a :href="props.linkInsta"><img class=" ButtonsColor rounded-full p-1 w-8 h-8 hover:-translate-y-[2px]"
                 src="./images/brand-instagram.png" alt="linkInsta" /></a>
           </li>
         </ul>
@@ -55,9 +55,9 @@ defineProps({
             userDesc: props.userDesc,
           }" />
       </div>
-      <div id="Projects" class="border rounded-md mt-2 ">
+      <div id="Projects" class="Projects border rounded-md mt-2 ">
         <section>
-          <div class="text-black hover:border border-sky-500 duration-200">
+          <div class="hover:border duration-200">
             <v-carousel hide-delimiters style="height: 90%">
               <v-carousel-item v-for="projects in props.projects" :key="projects.id" class="CardItem">
                 <div class="flex flex-col md:grid md:grid-rows-2 md:grid-flow-col md:gap-1">
@@ -70,9 +70,9 @@ defineProps({
                   <div class="flex flex-row justify-center mb-2 md:row-span-2 md:col-span-2 md:mt-10 md:ml-2">
                     <div class="flex space-x-2 p-0">
                       <a class="hover:-translate-y-[2px]" :href="projects.linkView"><img
-                          class="p-1 w-8 h-8 bg-[#172236] rounded-full" src="./images/eye.png" alt="the project" /></a>
+                          class="p-1 w-8 h-8 ButtonsColor rounded-full" src="./images/eye.png" alt="the project" /></a>
                       <a class="hover:-translate-y-[2px]" :href="projects.linkSource"><img
-                          class="p-1 w-8 h-8 bg-[#172236] rounded-full" src="./images/brand-github.png" alt="source code" /></a>
+                          class="p-1 w-8 h-8 ButtonsColor rounded-full" src="./images/brand-github.png" alt="source code" /></a>
                     </div>
                   </div>
                 </div>
@@ -82,16 +82,16 @@ defineProps({
         </section>
       </div>
       <div class="border rounded-md mt-2">
-        <section id="Certifies" class="hover:border border-sky-500 duration-200">
+        <section id="Certifies" class="hover:border duration-200">
             <h3
-              class="mt-2 font-bold tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-violet-500 ">
+              class="mt-2 font-bold tracking-widest uppercase bg-clip-text text-transparent Certifies">
               {{ props.titleCert }}
             </h3>
             <div class="flex flex-col p-2 items-center content-center space-y-4 justify-center md:flex-row md:space-x-4">
               <div class="flex-col text-center justify-center items-center">
-                <a class="flex text-center justify-center items-center text-slate-100 no-underline" href="https://google.com">
+                <a class="flex text-center justify-center items-center no-underline" :href="props.linkCert1">
                   <img class="max-w-[450px] max-h-[150px] rounded hover:scale-[1.1] duration-300"
-                    src="https://matriculas.estacio.br/blog/wp-content/uploads/2020/02/30est01-ciencia-dados.jpg"
+                    :src="props.imageCert1"
                     alt="" />
                 </a>
                 <div class="text-center">
@@ -100,9 +100,9 @@ defineProps({
                 </div>
               </div>
               <div class="flex-col text-center justify-center items-center">
-                <a class="flex text-center justify-center items-center text-slate-100 no-underline" href="https://google.com">
+                <a class="flex text-center justify-center items-center no-underline" :href="props.linkCert2">
                   <img class="max-w-[350px] max-h-[150px] rounded hover:scale-[1.1] duration-300"
-                    src="https://img-c.udemycdn.com/course/480x270/2037548_028f.jpg" alt="" />
+                    :src="props.imageCert2" alt="" />
                 </a>
                 <div class="text-center">
                   <h5 class="">{{ props.nameCert2 }}</h5>
@@ -116,6 +116,20 @@ defineProps({
   </div>
 </template>
 <style scoped>
+
+.ButtonsColor{
+  background-color: #010b9d;
+}
+.Certifies{
+  background-image: linear-gradient(to right, var(--color-certifies1), var(--color-certifies2));
+}
+.BodySide {
+  background-color: var(--color-background);
+  color: var(--color-font);
+}
+.Projects {
+  color: var(--color-font);
+}
 .SkillImage {
   width: 100px;
   height: 100px;
@@ -125,5 +139,6 @@ defineProps({
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  color: var(--color-font);
 }
 </style>

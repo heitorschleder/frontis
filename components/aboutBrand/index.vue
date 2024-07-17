@@ -7,7 +7,7 @@ defineProps({
 <template>
     <section
           id="AboutBrand"
-          class="hover:-translate-y-[2px] hover:border border-sky-500 duration-200"
+          class="hover:-translate-y-[2px] hover:border duration-200"
         >
           <div
             class="p-2"

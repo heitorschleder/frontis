@@ -1,15 +1,24 @@
 export interface RestartProps {
+    colorBackground: string;
+    colorFont: string;
+    colorCertifies1: string;
+    colorCertifies2: string;
+
     userName: string;
     userPhoto: string;
     userEspec: string;
     userDesc: string;
     aboutTitle: string;
-    
+
     titleCert: string;
     nameCert1: string;
+    imageCert1: string;
+    linkCert1: string;
     timeCert1: string;
 
     nameCert2: string;
+    imageCert2: string;
+    linkCert2: string;
     timeCert2: string;
 
     linkInsta: string;
@@ -37,6 +46,11 @@ export interface Projects {
     linkSource: string;
 }
 export const restartProps = {
+    colorBackground: "yellow",
+    colorFont: "#000",
+    colorCertifies1: "red",
+    colorCertifies2: "blue",
+
     userPhoto: "https://devheitorschleder.netlify.app/images/heitor.png.png",
     userName: 'Heitor teste',
     userEspec: "Dev",
@@ -46,10 +60,9 @@ export const restartProps = {
     linkFace: "https://www.facebook.com/heitor.schleder",
     linkLinkedin: "https://www.linkedin.com/in/heitor-de-oliveira-schleder-10345a1ab/",
 
-    userDesc: "Olá! Meu nome é Heitor. Sou formado em Ciência de Dados e trabalho como desenvolvedor fullstack. Tenho experiência com diversas linguagens de programação, incluindo JavaScript, PHP, Java, SQL, SQLite e Python, além de frameworks como Vue.js (usando Nuxt) e, ocasionalmente, React. Também possuo conhecimento em versionamento com Git e em Docker. Além disso, tenho experiência com ferramentas como Directus, Cloudflare, Google Cloud, Google Analytics, entre outras. Tenho um grande interesse em aprender novas tecnologias e estou sempre estudando para me manter atualizado com as demandas do mercado.",
-    
     aboutTitle: "Olá! ",
-
+    userDesc: "Olá! Meu nome é Heitor. Sou formado em Ciência de Dados e trabalho como desenvolvedor fullstack a 3 anos. Tenho experiência com diversas linguagens de programação, incluindo JavaScript, PHP, Java, SQL, SQLite e Python, além de frameworks como Vue.js (usando Nuxt) e, ocasionalmente, React. Também possuo conhecimento em versionamento com Git e em Docker. Além disso, tenho experiência com ferramentas como Directus, Cloudflare, Google Cloud, Google Analytics, entre outras. Tenho um grande interesse em aprender novas tecnologias e estou sempre estudando para me manter atualizado com as demandas do mercado.",
+    
     skills: [{
         id: 1,
         colorSkill: "#00000000",
@@ -157,7 +170,11 @@ export const restartProps = {
     
     nameCert1: "Técnologo em Ciência de Dados",
     timeCert1: "Data da Conclusão: 06/2024",
+    imageCert1: "https://matriculas.estacio.br/blog/wp-content/uploads/2020/02/30est01-ciencia-dados.jpg",
+    linkCert1:  "",
     
     nameCert2: "Curso Vue JS 2 - O Guia Completo",
     timeCert2: "46 horas",
+    imageCert2: "string;",
+    linkCert2: "string;"
 } as RestartProps;
