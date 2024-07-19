@@ -1,5 +1,6 @@
 export interface RestartProps {
     colorBackground: string;
+    colorButtons: string;
     colorFont: string;
     colorCertifies1: string;
     colorCertifies2: string;
@@ -46,10 +47,11 @@ export interface Projects {
     linkSource: string;
 }
 export const restartProps = {
-    colorBackground: "yellow",
-    colorFont: "#000",
-    colorCertifies1: "red",
-    colorCertifies2: "blue",
+    colorBackground: "#5D666F",
+    colorFont: "#fff",
+    colorCertifies1: "#284C5B",
+    colorCertifies2: "#fff",
+    colorButtons: "#12252D",
 
     userPhoto: "https://devheitorschleder.netlify.app/images/heitor.png.png",
     userName: 'Heitor teste',

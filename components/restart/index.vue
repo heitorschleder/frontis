@@ -118,7 +118,7 @@ defineProps({
 <style scoped>
 
 .ButtonsColor{
-  background-color: #010b9d;
+  background-color: var(--color-buttons);
 }
 .Certifies{
   background-image: linear-gradient(to right, var(--color-certifies1), var(--color-certifies2));
